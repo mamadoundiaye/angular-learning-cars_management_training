@@ -1,0 +1,18 @@
+<div>
+  <div *ngFor="let car of cars">
+    We have a {{car.make}} {{car.model}} with a mileage of {{car.miles}} own by {{car.owner}}
+  </div>
+</div>
+
+<div>
+  <input [(ngModel)]="make" placeholder="make">
+  <input [(ngModel)]="model" placeholder="model">
+  <input type="number" [(ngModel)]="miles" placeholder="miles">
+  <input [(ngModel)]="prenom" placeholder="owner prenom">
+  <p style="color:green">{{make}}</p>
+  <p style="color:yellow">{{model}}</p>
+  <p style="color:red">{{miles}}</p>
+  <p style="color:blue">{{prenom}}</p>
+</div>
+
+<button (click)="addCar()">add Car</button>
