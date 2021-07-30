@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Car } from './car';
 import { Owner } from './car';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -22,11 +24,13 @@ export class TransportationService {
   cars: Car[] = [this.subaru, this.honda, this.bmw];
   owners: Owner[] = [this.owner_id1, this.owner_id2, this.owner_id3];
 
+  Http(){ return 'http://localhost:3000/cars/'; }
+
   constructor() {}
 
   // new code
-  getCars() {
-    return this.cars;
+  getCars(): Observable {
+    return this.Http;
   }
 
   addCar(car: Car) {

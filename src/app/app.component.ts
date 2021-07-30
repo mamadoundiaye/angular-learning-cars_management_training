@@ -25,6 +25,7 @@ export class AppComponent {
   }
 
   addCar() {
+    alert('enregistrement dans services');
     const newCar: Car = {
       make: this.make,
       model: this.model,
